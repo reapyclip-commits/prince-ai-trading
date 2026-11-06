@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: prince-ai-trading
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: TWELVE_KEY
+        sync: false
